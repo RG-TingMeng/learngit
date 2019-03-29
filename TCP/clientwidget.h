@@ -26,6 +26,8 @@ private slots:
     void dealConnect();
     void readInfo();
 
+    void on_btnAdd_clicked();
+
 private:
     Ui::ClientWidget *ui;
 

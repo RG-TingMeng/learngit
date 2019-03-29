@@ -15,10 +15,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         serverwidget.cpp \
-    clientwidget.cpp
+    clientwidget.cpp \
+    student.cpp \
+    pragrammer.cpp
 
 HEADERS  += serverwidget.h \
-    clientwidget.h
+    clientwidget.h \
+    student.h \
+    pragrammer.h
 
 FORMS    += serverwidget.ui \
     clientwidget.ui

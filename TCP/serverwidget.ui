@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>ServerWidget</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -79,11 +79,11 @@
         <property name="currentIndex">
          <number>0</number>
         </property>
-        <widget class="QWidget" name="tab">
+        <widget class="QWidget" name="student">
          <attribute name="title">
           <string>Tab 1</string>
          </attribute>
-         <widget class="QTableWidget" name="tableWidget">
+         <widget class="QTableWidget" name="tableWidgetStu">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -104,11 +104,11 @@
           </column>
          </widget>
         </widget>
-        <widget class="QWidget" name="tab_2">
+        <widget class="QWidget" name="programmer">
          <attribute name="title">
           <string>Tab 2</string>
          </attribute>
-         <widget class="QTableWidget" name="tableWidget_2">
+         <widget class="QTableWidget" name="tableWidgetPro">
           <property name="geometry">
            <rect>
             <x>-10</x>
@@ -134,9 +134,9 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="btnToSql">
           <property name="text">
-           <string>PushButton</string>
+           <string>add to sql</string>
           </property>
          </widget>
         </item>

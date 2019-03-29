@@ -1,7 +1,14 @@
 ﻿#include "clientwidget.h"
 #include "ui_clientwidget.h"
+#include "student.h"
 #include <QHostAddress>
 
+/**
+ * @brief ClientWidget.cpp主要是客户端连接服务器的一些函数文件
+ * @author chentingmeng
+ * @version 1.0.7
+ * @date 2019.3.29
+ */
 ClientWidget::ClientWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ClientWidget)
@@ -23,6 +30,9 @@ ClientWidget::~ClientWidget()
     delete ui;
 }
 
+/**
+ * @brief 显示与服务器连接成功
+ */
 void ClientWidget::dealConnect()
 {
     ui->textEditRead->setText("connect success");
@@ -33,6 +43,9 @@ void ClientWidget::readInfo()
     ui->textEditRead->append(str);
 }
 
+/**
+ * @brief 和服务器主动进行连接
+ */
 void ClientWidget::on_btnConnect_clicked()
 {
     //获取服务器IP和端口
@@ -43,6 +56,9 @@ void ClientWidget::on_btnConnect_clicked()
     tcpSocket->connectToHost(QHostAddress(ip),port);
 }
 
+/**
+ * @brief 点击"send"按钮进行发送消息给服务器
+ */
 void ClientWidget::on_btnSend_clicked()
 {
     if(NULL == tcpSocket)
@@ -55,6 +71,9 @@ void ClientWidget::on_btnSend_clicked()
     tcpSocket->write(str.toUtf8().data());
 }
 
+/**
+ * @brief 点击"关闭"按钮时的，客户端主动断开与服务器连接
+ */
 void ClientWidget::on_btnClose_clicked()
 {
     if(NULL == tcpSocket)
@@ -64,4 +83,22 @@ void ClientWidget::on_btnClose_clicked()
     //主动和对方断开连接
     tcpSocket->disconnectFromHost();
     tcpSocket->close();
+}
+
+/**
+ * @brief 将comboBox中添加的对象发送给服务器
+ */
+void ClientWidget::on_btnAdd_clicked()
+{
+    int t_comboBoxIndex = ui->comboBox->currentIndex();
+    QString t_name = ui->lineEditName->text();
+    int t_age = ui->lineEditAge->text().toInt();
+
+//    Student t_stu;
+//    t_stu.setName(t_name);
+//    t_stu.setAge(t_age);
+
+    //将学生对象发送过去
+//    tcpSocket->write((char *)&t_stu,sizeof(t_stu));
+
 }

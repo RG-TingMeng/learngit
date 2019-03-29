@@ -4,7 +4,7 @@
 #include <QWidget>
 #include <QTcpServer>//监听套接字
 #include <QTcpSocket>//通信套接字
-
+#include "student.h"
 namespace Ui {
 class ServerWidget;
 }
@@ -16,6 +16,8 @@ class ServerWidget : public QWidget
 public:
     explicit ServerWidget(QWidget *parent = 0);
     ~ServerWidget();
+    void ServerWidget::add_Object_tableWidget();
+     Student & operator =(Student &stu);
 
 private slots:
     void on_btnSend_clicked();

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -112,9 +112,9 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QPushButton" name="btnClose">
+         <widget class="QPushButton" name="btnSend">
           <property name="text">
-           <string>close</string>
+           <string>send</string>
           </property>
          </widget>
         </item>
@@ -132,9 +132,9 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="btnSend">
+         <widget class="QPushButton" name="btnClose">
           <property name="text">
-           <string>send</string>
+           <string>close</string>
           </property>
          </widget>
         </item>
@@ -151,7 +151,18 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QComboBox" name="comboBox"/>
+          <widget class="QComboBox" name="comboBox">
+           <item>
+            <property name="text">
+             <string>student</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>programmer</string>
+            </property>
+           </item>
+          </widget>
          </item>
          <item>
           <spacer name="verticalSpacer">
@@ -169,28 +180,34 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
-            <widget class="QLabel" name="label">
+            <widget class="QLabel" name="labelName">
+             <property name="minimumSize">
+              <size>
+               <width>9</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="text">
-              <string>TextLabel</string>
+              <string>Name</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit"/>
+            <widget class="QLineEdit" name="lineEditName"/>
            </item>
           </layout>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="labelAge">
              <property name="text">
-              <string>TextLabel</string>
+              <string>Age</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
+            <widget class="QLineEdit" name="lineEditAge"/>
            </item>
           </layout>
          </item>
@@ -208,9 +225,9 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="btnAdd">
            <property name="text">
-            <string>PushButton</string>
+            <string>add</string>
            </property>
           </widget>
          </item>
