@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<text>
+        <ip>192.168.74.1</ip>
+        <port>1000</port>
+        <localhost>localhost</localhost>
+        <database>course</database>
+        <username>root</username>
+        <passwd>123456</passwd>
+</text>
